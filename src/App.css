@@ -15,48 +15,69 @@
   width: 100%;
 }
 
-#header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  min-height: 60px;
-  background-color: black;
-  color: white;
+#main {
 }
 
-#title {
-  /*-40px is size of sidebar button*/
-  margin-left: calc(50% - 60px);
-  font-size: 32px;
+#toolbar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#create-card {
+  position: relative;
+}
+
+#create-card-button {
+  margin: 10px;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#create-card-label {
+  position: absolute;
+  top: 0px;
+  margin: 5px;
+  z-index: -1;
+}
+
+#list-header {
+  display: flex;
+  justify-content: space-around;
   font-family: roboto;
 }
 
-#sidebar-toggle {
-  padding: 10px;
-}
-
-#sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: #424242;
-  color: white;
-}
-
-#main {
-  background:red;
+#checkbox {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .material-symbols-outlined {
   font-size: 40px;
 }
 
-.sidebar-section {
+.list-card {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  margin: 5px;
+  padding: 10px;
+  background-color: darkcyan;
+  color: white;
+  font-family: roboto;
+  border-radius: 10px;
 }
 
-.sidebar-item {
-  padding: 10px;
+.list-card-data-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px 10px;
+  width: 100%;
+  
 }
+
+

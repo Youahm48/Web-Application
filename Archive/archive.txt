@@ -1,0 +1,105 @@
+The text fields
+HTML
+            <input id="textfield-inactive"/>
+            <input id="textfield-active"/>
+            <input id="textfield-focused"/>
+            <label id="error-label" class="material-symbols-outlined">error</label>
+            <input id="textfield-error"/>
+CSS
+
+#textfield-inactive {
+  margin: 20px;
+  padding: 5px;
+}
+
+#textfield-active {
+  margin: 20px;
+  padding: 5px;
+}
+
+#textfield-focused {
+  margin: 20px;
+  padding: 5px;
+}
+
+#textfield-error {
+  margin: 20px;
+  padding: 7px;
+  border: solid red 1px;
+  border-radius: 3px;
+}
+
+#error-label {
+  position: absolute;
+  margin-top: 22px;
+  margin-left: 174px;
+  font-size: 25px;
+  color: red;
+}
+
+
+
+
+Buttons
+
+            <button id="inactive-confirm">Confirm</button>
+            <button id="active-confirm">Confirm</button>
+            <button id="cancel">Cancel</button>
+            <button id="delete">Delete</button>
+
+
+#active-confirm {
+  margin: 10px;
+  padding: 5px;
+  width: 85px;
+  height: 40px;
+  border: solid #007aff 1px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: white;
+  background-color: #007aff;
+  font-size: 14px;
+  font-family: roboto;
+}
+
+#inactive-confirm {
+  margin: 10px;
+  padding: 5px;
+  width: 85px;
+  height: 40px;
+  border: solid grey 1px;
+  border-radius: 7px;
+  cursor: not-allowed;
+  color: white;
+  background-color: grey;
+  font-size: 14px;
+  font-family: roboto;
+}
+
+#cancel {
+  margin: 10px;
+  padding: 5px;
+  width: 85px;
+  height: 40px;
+  border: solid grey 1px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: grey;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: roboto;
+}
+
+#delete {
+  margin: 10px;
+  padding: 5px;
+  width: 85px;
+  height: 40px;
+  border: solid red 1px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: red;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: roboto;
+}

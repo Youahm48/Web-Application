@@ -1,0 +1,27 @@
+#sidebar-toggle {
+  padding: 10px;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #424242;
+  color: white;
+}
+
+#bottom-sidebar-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  padding: 10px;
+}
