@@ -9,8 +9,7 @@ export default function Toolbar() {
   return(
     <div id="toolbar" className="material-symbols-outlined">
       <div id="create-card">
-        <button id="create-card-button" className="material-symbols-outlined" onClick={createCard}></button>
-        <div id="create-card-label">add_box</div>
+        <button id="create-card-button" className="material-symbols-outlined" onClick={createCard}>add</button>
       </div>
     </div>
   )

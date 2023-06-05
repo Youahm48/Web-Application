@@ -10,16 +10,10 @@
 #create-card-button {
   margin: 10px;
   padding: 0px;
-  width: 30px;
-  height: 30px;
-  background: none;
+  background: black;
+  color: white;
+  font-size: 32px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-#create-card-label {
-  position: absolute;
-  top: 0px;
-  margin: 5px;
-  z-index: -1;
 }
