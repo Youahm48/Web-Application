@@ -1,7 +1,11 @@
 import React from "react"
 import "../stylesheets/modals/CreateCardModal.css"
 
-export default function CreateCardModal() {
+export default function CreateCardModal(props) {
+  if(!props.isOpen) {
+    return null
+  }
+  
   return(
     <div id="create-card-modal-background">
       <div id="create-card-modal">
@@ -15,8 +19,8 @@ export default function CreateCardModal() {
             <div>Subject <input/></div>
           </div>
           <div id="create-card-form-footer">
-            <button class="active-confirm">Confirm</button>
-            <button class="cancel">Cancel</button>
+            <button className="active-confirm">Confirm</button>
+            <button className="cancel">Cancel</button>
           </div>
         </div>
       </div>
