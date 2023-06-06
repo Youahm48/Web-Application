@@ -20,7 +20,7 @@ export default function CreateCardModal(props) {
           </div>
           <div id="create-card-form-footer">
             <button className="active-confirm">Confirm</button>
-            <button className="cancel">Cancel</button>
+            <button className="cancel" onClick={props.cancel}>Cancel</button>
           </div>
         </div>
       </div>

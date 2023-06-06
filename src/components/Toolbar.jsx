@@ -5,18 +5,22 @@ import "../stylesheets/components/Toolbar.css"
 export default function Toolbar() {
   const [isOpen, setIsOpen] = React.useState("")
   
-  function openCreateCardModal() {
+  function openModal() {
       setIsOpen(true)
+  }
+
+  function cancel() {
+    setIsOpen(false)
   }
   
   return(
     <div>
       <div id="toolbar" className="material-symbols-outlined">
         <div id="create-card">
-          <button id="create-card-button" className="material-symbols-outlined" onClick={openCreateCardModal}>add</button>
+          <button id="create-card-button" className="material-symbols-outlined" onClick={openModal}>add</button>
         </div>
       </div>
-      <CreateCardModal isOpen={isOpen} />
+      <CreateCardModal isOpen={isOpen} cancel={cancel} />
     </div>
   )
 }
