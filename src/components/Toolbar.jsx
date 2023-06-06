@@ -1,16 +1,22 @@
 import React from "react"
+import CreateCardModal from "../modals/CreateCardModal"
 import "../stylesheets/components/Toolbar.css"
 
-function createCard() {
-  console.log("r")
-}
-
 export default function Toolbar() {
+  const [isOpen, setIsOpen] = React.useState("")
+  
+  function openCreateCardModal() {
+      setIsOpen(true)
+  }
+  
   return(
-    <div id="toolbar" className="material-symbols-outlined">
-      <div id="create-card">
-        <button id="create-card-button" className="material-symbols-outlined" onClick={createCard}>add</button>
+    <div>
+      <div id="toolbar" className="material-symbols-outlined">
+        <div id="create-card">
+          <button id="create-card-button" className="material-symbols-outlined" onClick={openCreateCardModal}>add</button>
+        </div>
       </div>
+      <CreateCardModal isOpen={isOpen} />
     </div>
   )
 }

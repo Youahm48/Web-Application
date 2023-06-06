@@ -3,7 +3,6 @@ import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 import Toolbar from "./components/Toolbar"
 import ListCard from "./components/ListCard"
-import CreateCardModal from "./modals/CreateCardModal"
 import './App.css'
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
             <div>Subject</div>
           </div>
           <ListCard status="incomplete" name="Task 1" dueDate="Today" priority="Low" subject="Project" />
-          <CreateCardModal isOpen={false} />
         </div>
       </div>
     </div>
