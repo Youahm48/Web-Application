@@ -30,6 +30,7 @@
 #create-card-form-body input {
   padding: 3px;
   margin: 5px;
+  margin-left: 0px;
 }
 
 #create-card-form-footer {

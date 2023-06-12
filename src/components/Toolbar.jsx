@@ -6,10 +6,10 @@ export default function Toolbar() {
   const [isOpen, setIsOpen] = React.useState("")
   
   function openModal() {
-      setIsOpen(true)
+    setIsOpen(true)
   }
 
-  function cancel() {
+  function closeModal() {
     setIsOpen(false)
   }
   
@@ -20,7 +20,7 @@ export default function Toolbar() {
           <button id="create-card-button" className="material-symbols-outlined" onClick={openModal}>add</button>
         </div>
       </div>
-      <CreateCardModal isOpen={isOpen} cancel={cancel} />
+      <CreateCardModal isOpen={isOpen} closeModal={closeModal} />
     </div>
   )
 }

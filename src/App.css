@@ -18,40 +18,7 @@
 #main {
 }
 
-#list-header {
-  display: flex;
-  justify-content: space-around;
-  font-family: roboto;
-}
-
-#checkbox {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 .material-symbols-outlined {
   font-size: 40px;
 }
-
-.list-card {
-  display: flex;
-  justify-content: flex-start;
-  margin: 5px;
-  padding: 10px;
-  background-color: darkcyan;
-  color: white;
-  font-family: roboto;
-  border-radius: 10px;
-}
-
-.list-card-data-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0px 10px;
-  width: 100%;
-  
-}
-
 
