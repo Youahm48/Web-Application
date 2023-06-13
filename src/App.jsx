@@ -6,39 +6,27 @@ import ListContainer from "./components/ListContainer"
 import ListCard from "./components/ListCard"
 import './App.css'
 
-//const [tasks, setTasks] = React.useState(props.tasks)
-//Test Data
-const tasks = [{
-  status: "incomplete",
-  name: "Task 1",
-  dueDate: "Today",
-  priority: "Low",
-  subject: "Project"
-},
-{
-  status: "complete",
-  name: "Task 2",
-  dueDate: "Tomorrow",
-  priority: "Medium",
-  subject: "Random task"
-},
-{
-  status: "incomplete",
-  name: "Task 3",
-  dueDate: "Yesterday",
-  priority: "High",
-  subject: "A subject"
-}]
+import CreateCardModal from "./modals/CreateCardModal"
 
 export default function App() {
+  const [tasks, setTasks] = React.useState([])
 
-/*  const taskList = tasks.map(
-    function(task) {
-      return(
-        <ListCard status="incomplete" name="Task 1" dueDate="Today" priority="Low" subject="Project" />
-      )
-    }
-  )*/
+  function addTask(taskObject) {
+    setTasks([
+      ...tasks,
+      taskObject
+    ])
+  }
+
+  const [isOpen, setIsOpen] = React.useState("")
+  
+  function openModal() {
+    setIsOpen(true)
+  }
+
+  function closeModal() {
+    setIsOpen(false)
+  }
   
   return(
     <div id="horizontal-container">
@@ -46,7 +34,8 @@ export default function App() {
       <div id="vertical-container">
         <Header />
         <div id="main">
-          <Toolbar />
+          <CreateCardModal isOpen={isOpen} closeModal={closeModal} addTask={addTask} />
+          <Toolbar openModal={openModal} />
           <ListContainer tasks={tasks} />
         </div>
       </div>

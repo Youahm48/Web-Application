@@ -2,16 +2,25 @@ import React from "react"
 import "../stylesheets/modals/CreateCardModal.css"
 
 export default function CreateCardModal(props) {
-  //Create handle submit function and use on handle submit for the form to pass variables into a database https://www.w3schools.com/react/react_forms.asp
   const [name, setName] = React.useState("")
-  const [time, setTime] = React.useState("")
+  const [deadline, setDeadline] = React.useState("")
   const [priority, setPriority] = React.useState("")
   const [subject, setSubject] = React.useState("")
   
   function handleSubmit(event) {
     event.preventDefault()
+    props.addTask({
+      name: name,
+      deadline: deadline,
+      priority: priority,
+      subject: subject
+    })
+    setName("")
+    setDeadline("")
+    setPriority("")
+    setSubject("")
     console.log(name)
-    console.log(time)
+    console.log(deadline)
     console.log(priority)
     console.log(subject)
     props.closeModal()
@@ -20,8 +29,8 @@ export default function CreateCardModal(props) {
   function handleNameChange(event) {
     setName(event.target.value)
   }
-  function handleTimeChange(event) {
-    setTime(event.target.value)
+  function handleDeadlineChange(event) {
+    setDeadline(event.target.value)
   }
   function handlePriorityChange(event) {
     setPriority(event.target.value)
@@ -46,8 +55,8 @@ export default function CreateCardModal(props) {
               <input onChange={handleNameChange} />
             </div>
             <div>
-              <p>Time</p>
-              <input onChange={handleTimeChange} />
+              <p>Deadline</p>
+              <input onChange={handleDeadlineChange} />
             </div>
             <div>
               <p>Priority</p>

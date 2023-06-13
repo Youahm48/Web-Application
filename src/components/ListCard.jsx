@@ -7,7 +7,7 @@ export default function ListCard(props) {
       <button id="checkbox" className="material-symbols-outlined">check_box_outline_blank</button>
       <div className="list-card-data-container">
         <div>{props.name}</div>
-        <div>{props.dueDate}</div>
+        <div>{props.deadline}</div>
         <div>{props.priority}</div>
         <div>{props.subject}</div>
       </div>

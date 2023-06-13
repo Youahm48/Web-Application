@@ -9,7 +9,7 @@ export default function ListContainer(props) {
         <ListCard
           status={item.status}
           name={item.name}
-          dueDate={item.dueDate}
+          deadline={item.deadline}
           priority={item.priority}
           subject={item.subject}
         />
