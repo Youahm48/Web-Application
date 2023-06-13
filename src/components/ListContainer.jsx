@@ -2,7 +2,21 @@ import React from "react"
 import ListCard from "./ListCard"
 import "../stylesheets/components/ListContainer.css"
 
-export default function ListContainer() {
+export default function ListContainer(props) {
+  const listItems = props.tasks.map(
+    function(item) {
+      return(
+        <ListCard
+          status={item.status}
+          name={item.name}
+          dueDate={item.dueDate}
+          priority={item.priority}
+          subject={item.subject}
+        />
+      )
+    }
+  )
+  
   return(
     <div id="list-container">
       <div id="list-header">
@@ -11,7 +25,9 @@ export default function ListContainer() {
         <div>Priority</div>
         <div>Subject</div>
       </div>
-      <ListCard status="incomplete" name="Task 1" dueDate="Today" priority="Low" subject="Project" />
+      <div id="card-container">
+        {listItems}
+      </div>
     </div>
   )
 }

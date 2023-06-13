@@ -11,6 +11,9 @@ export default function CreateCardModal(props) {
   function handleSubmit(event) {
     event.preventDefault()
     console.log(name)
+    console.log(time)
+    console.log(priority)
+    console.log(subject)
     props.closeModal()
   }
 
