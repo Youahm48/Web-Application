@@ -3,19 +3,39 @@ import ListCard from "./ListCard"
 import "../stylesheets/components/ListContainer.css"
 
 export default function ListContainer(props) {
-  const listItems = props.tasks.map(
+  const completeListItems = props.tasks.map(
     function(item) {
-      return(
-        <ListCard
-          id={item.id}
-          isComplete={item.isComplete}
-          name={item.name}
-          deadline={item.deadline}
-          priority={item.priority}
-          subject={item.subject}
-          toggleTaskStatus={props.toggleTaskStatus}
-        />
-      )
+      if(item.isComplete) {
+        return(
+          <ListCard
+            id={item.id}
+            isComplete={item.isComplete}
+            name={item.name}
+            deadline={item.deadline}
+            priority={item.priority}
+            subject={item.subject}
+            toggleTaskStatus={props.toggleTaskStatus}
+          />
+        )
+      }
+    }
+  )
+
+  const incompleteListItems = props.tasks.map(
+    function(item) {
+      if(!item.isComplete) {
+        return(
+          <ListCard
+            id={item.id}
+            isComplete={item.isComplete}
+            name={item.name}
+            deadline={item.deadline}
+            priority={item.priority}
+            subject={item.subject}
+            toggleTaskStatus={props.toggleTaskStatus}
+          />
+        )
+      }
     }
   )
   
@@ -27,8 +47,13 @@ export default function ListContainer(props) {
         <div>Priority</div>
         <div>Subject</div>
       </div>
-      <div id="card-container">
-        {listItems}
+      <div id="incomplete-card-container">
+        Incomplete:
+        {incompleteListItems}
+      </div>
+      <div id="complete-card-container">
+        Complete:
+        {completeListItems}
       </div>
     </div>
   )

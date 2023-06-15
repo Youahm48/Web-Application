@@ -2,8 +2,6 @@ import React from "react"
 import "../stylesheets/components/ListCard.css"
 
 export default function ListCard(props) {
-  //Should I change checkbox button to input and use toggle complete task as onchange function?
-  
   var checkbox;
   if(props.isComplete) {
     checkbox = <button id="checkbox" className="material-symbols-outlined" onClick={props.toggleTaskStatus}>check_box</button>
