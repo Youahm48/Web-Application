@@ -1,4 +1,5 @@
 import React from "react"
+import { nanoid } from "nanoid"
 import "../stylesheets/modals/CreateCardModal.css"
 
 export default function CreateCardModal(props) {
@@ -10,6 +11,8 @@ export default function CreateCardModal(props) {
   function handleSubmit(event) {
     event.preventDefault()
     props.addTask({
+      id: `Task-${nanoid()}`,
+      isComplete: false,
       name: name,
       deadline: deadline,
       priority: priority,

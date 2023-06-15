@@ -7,11 +7,13 @@ export default function ListContainer(props) {
     function(item) {
       return(
         <ListCard
-          status={item.status}
+          id={item.id}
+          isComplete={item.isComplete}
           name={item.name}
           deadline={item.deadline}
           priority={item.priority}
           subject={item.subject}
+          toggleTaskStatus={props.toggleTaskStatus}
         />
       )
     }

@@ -18,6 +18,18 @@ export default function App() {
     ])
   }
 
+  function toggleTaskStatus(event) {
+    const updatedTasks = tasks.map(
+      function(task) {
+        if(task.id == event.target.parentElement.id) {
+          return { ...task, isComplete: !task.isComplete }
+        }
+        return task
+      }
+    )
+    setTasks(updatedTasks)
+  }
+
   const [isOpen, setIsOpen] = React.useState("")
   
   function openModal() {
@@ -36,7 +48,7 @@ export default function App() {
         <div id="main">
           <CreateCardModal isOpen={isOpen} closeModal={closeModal} addTask={addTask} />
           <Toolbar openModal={openModal} />
-          <ListContainer tasks={tasks} />
+          <ListContainer tasks={tasks} toggleTaskStatus={toggleTaskStatus}/>
         </div>
       </div>
     </div>
