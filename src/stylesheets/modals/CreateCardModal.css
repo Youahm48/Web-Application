@@ -27,6 +27,16 @@
   margin: 10px;
 }
 
+#create-card-form-body div {
+  display: flex;
+  align-items: center;
+  
+}
+
+#create-card-form-body div p {
+  margin-right: 5px;
+}
+
 #create-card-form-body input {
   padding: 3px;
   margin: 5px;

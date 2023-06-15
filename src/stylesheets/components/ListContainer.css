@@ -3,3 +3,13 @@
   justify-content: space-around;
   font-family: roboto;
 }
+
+#incomplete-card-header {
+  margin: 10px;
+  font-family: roboto;
+}
+
+#complete-card-header {
+  margin: 10px;
+  font-family: roboto;
+}

@@ -48,11 +48,11 @@ export default function ListContainer(props) {
         <div>Subject</div>
       </div>
       <div id="incomplete-card-container">
-        Incomplete:
+        <div id="incomplete-card-header">Incomplete:</div>
         {incompleteListItems}
       </div>
       <div id="complete-card-container">
-        Complete:
+        <div id="complete-card-header">Complete:</div>
         {completeListItems}
       </div>
     </div>
