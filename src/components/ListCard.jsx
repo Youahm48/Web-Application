@@ -14,7 +14,10 @@ export default function ListCard(props) {
       {checkbox}
       <div className="list-card-data-container">
         <div>{props.name}</div>
-        <div>{props.deadline}</div>
+        <div>
+          <div>{new Date(props.deadline).toLocaleDateString("en-GB")}</div>
+          <div>{new Date(props.deadline).toLocaleTimeString("en-US", {hour: "numeric", minute: "numeric"})}</div>
+        </div>
         <div>{props.priority}</div>
         <div>{props.subject}</div>
       </div>
