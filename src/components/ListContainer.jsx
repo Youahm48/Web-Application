@@ -43,7 +43,7 @@ export default function ListContainer(props) {
     <div id="list-container">
       <div id="list-header">
         <div>Task name</div>
-        <div>Due date</div>
+        <div>Deadline</div>
         <div>Priority</div>
         <div>Subject</div>
       </div>
