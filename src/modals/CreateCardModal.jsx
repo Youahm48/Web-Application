@@ -33,7 +33,7 @@ export default function CreateCardModal(props) {
     setName(event.target.value)
   }
   function handleDeadlineChange(event) {
-    setDeadline(event.target.value)
+    setDeadline(new Date(event.target.value).toISOString())
   }
   function handlePriorityChange(event) {
     setPriority(event.target.value)
@@ -59,7 +59,7 @@ export default function CreateCardModal(props) {
             </div>
             <div>
               <p>Deadline</p>
-              <input onChange={handleDeadlineChange} />
+              <input type="datetime-local" onChange={handleDeadlineChange} />
             </div>
             <div>
               <p>Priority</p>
