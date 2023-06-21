@@ -4,7 +4,7 @@ import "../stylesheets/components/Sidebar.css"
 export default function Sidebar() {
   return(
     <div id="sidebar">
-      <span id="sidebar-toggle" className="material-symbols-outlined">menu</span>
+      <button id="sidebar-toggle" className="material-symbols-outlined">menu</button>
       <div className="sidebar-section">
         <a className="material-symbols-outlined sidebar-item">home</a>
         <a className="material-symbols-outlined sidebar-item">check_circle</a>

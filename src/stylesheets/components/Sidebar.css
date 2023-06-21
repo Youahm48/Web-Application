@@ -1,6 +1,9 @@
 #sidebar-toggle {
-  cursor: pointer;
   padding: 10px;
+  cursor: pointer;
+  background: #424242;
+  color: white;
+  border: none;
 }
 
 #sidebar {
