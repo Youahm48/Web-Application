@@ -1,17 +1,32 @@
+#sidebar {
+  display: flex;
+  flex-direction: row;
+}
+
+#sidebar-internal {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100vh;
+  background-color: #424242;
+  color: white;
+  font-family: roboto;
+}
+
+#sidebar-external {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #424242;
+  color: white;
+}
+
 #sidebar-toggle {
   padding: 10px;
   cursor: pointer;
   background: #424242;
   color: white;
   border: none;
-}
-
-#sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: #424242;
-  color: white;
 }
 
 #bottom-sidebar-section {
