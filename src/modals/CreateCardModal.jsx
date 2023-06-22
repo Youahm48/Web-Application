@@ -29,6 +29,14 @@ export default function CreateCardModal(props) {
     props.closeModal()
   }
 
+  function handleCancel() {
+    setName("")
+    setDeadline("")
+    setPriority("")
+    setSubject("")
+    props.closeModal()
+  }
+
   function handleNameChange(event) {
     setName(event.target.value)
   }
@@ -72,7 +80,7 @@ export default function CreateCardModal(props) {
           </div>
           <div id="create-card-form-footer">
             <button type="submit" className="active-confirm">Confirm</button>
-            <button type="button" className="cancel" onClick={props.closeModal}>Cancel</button>
+            <button type="button" className="cancel" onClick={handleCancel}>Cancel</button>
           </div>
         </form>
       </div>
