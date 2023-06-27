@@ -6,11 +6,53 @@
 #sidebar-internal {
   display: flex;
   flex-direction: column;
-  padding: 10px;
   height: 100vh;
+  width: 20vw;
   background-color: #424242;
   color: white;
   font-family: roboto;
+}
+
+#sidebar-internal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#sidebar-logo {
+  width: 40px;
+  height: 40px;
+}
+
+#sidebar-title {
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+#sidebar-internal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+#sidebar-internal-view-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 60px;
+  font-size: 16px;
+}
+
+#sidebar-internal-footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 60px;
+  font-size: 16px;
 }
 
 #sidebar-external {
