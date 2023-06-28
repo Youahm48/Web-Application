@@ -6,11 +6,13 @@ export default function Sidebar() {
 
   function toggleSidebar() {
     if(isOpen == false) {
-      document.getElementById("sidebar-internal").style.display = "none"
+      document.getElementById("sidebar-internal").style.display = "flex"
+      document.getElementById("sidebar-toggle").innerHTML = "close"
       return isOpen = true
     }
     else {
-      document.getElementById("sidebar-internal").style.display = "flex"
+      document.getElementById("sidebar-internal").style.display = "none"
+      document.getElementById("sidebar-toggle").innerHTML = "menu"
       return isOpen = false
     }
   }
