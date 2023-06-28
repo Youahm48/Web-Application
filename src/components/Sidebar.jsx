@@ -2,12 +2,17 @@ import React from "react"
 import "../stylesheets/components/Sidebar.css"
 
 export default function Sidebar() {
-  function expand() {
+  var isOpen = false
 
-  }
-
-  function collapse() {
-    
+  function toggleSidebar() {
+    if(isOpen == false) {
+      document.getElementById("sidebar-internal").style.display = "none"
+      return isOpen = true
+    }
+    else {
+      document.getElementById("sidebar-internal").style.display = "flex"
+      return isOpen = false
+    }
   }
   
   return(
@@ -30,7 +35,7 @@ export default function Sidebar() {
         </div>
       </div>
       <div id="sidebar-external">
-        <button id="sidebar-toggle" className="material-symbols-outlined">menu</button>
+        <button id="sidebar-toggle" className="material-symbols-outlined" onClick={toggleSidebar}>menu</button>
         <div className="sidebar-section">
           <a className="material-symbols-outlined sidebar-item">home</a>
           <a className="material-symbols-outlined sidebar-item">check_circle</a>
