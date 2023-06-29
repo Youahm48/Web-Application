@@ -73,10 +73,10 @@ export default function CreateCardModal(props) {
             </div>
             <div>
               <p>Priority</p>
-              <select onChange={handlePriorityChange}>
-                <option selected={defaultPriorityValue == "Low"}>Low</option>
-                <option selected={defaultPriorityValue == "Medium"}>Medium</option>
-                <option selected={defaultPriorityValue == "High"}>High</option>
+              <select onChange={handlePriorityChange} defaultValue={defaultPriorityValue}>
+                <option id="Low">Low</option>
+                <option id="Medium">Medium</option>
+                <option id="High">High</option>
               </select>
             </div>
             <div>
