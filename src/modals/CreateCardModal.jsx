@@ -3,9 +3,11 @@ import { nanoid } from "nanoid"
 import "../stylesheets/modals/CreateCardModal.css"
 
 export default function CreateCardModal(props) {
+  var defaultPriorityValue = "Low"
+  
   const [name, setName] = React.useState("")
   const [deadline, setDeadline] = React.useState("")
-  const [priority, setPriority] = React.useState("")
+  const [priority, setPriority] = React.useState(defaultPriorityValue)
   const [subject, setSubject] = React.useState("")
   
   function handleSubmit(event) {
@@ -20,7 +22,7 @@ export default function CreateCardModal(props) {
     })
     setName("")
     setDeadline("")
-    setPriority("")
+    setPriority(defaultPriorityValue)
     setSubject("")
     console.log(name)
     console.log(deadline)
@@ -32,7 +34,7 @@ export default function CreateCardModal(props) {
   function handleCancel() {
     setName("")
     setDeadline("")
-    setPriority("")
+    setPriority(defaultPriorityValue)
     setSubject("")
     props.closeModal()
   }
@@ -71,7 +73,11 @@ export default function CreateCardModal(props) {
             </div>
             <div>
               <p>Priority</p>
-              <input onChange={handlePriorityChange} />
+              <select onChange={handlePriorityChange}>
+                <option selected={defaultPriorityValue == "Low"}>Low</option>
+                <option selected={defaultPriorityValue == "Medium"}>Medium</option>
+                <option selected={defaultPriorityValue == "High"}>High</option>
+              </select>
             </div>
             <div>
               <p>Subject</p>
