@@ -1,12 +1,16 @@
 import React from "react"
+
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 import Toolbar from "./components/Toolbar"
 import ListContainer from "./components/ListContainer"
 import ListCard from "./components/ListCard"
-import './App.css'
 
 import CreateCardModal from "./modals/CreateCardModal"
+
+import './App.css'
+
+import Database from "./scripts/Database.js"
 
 export default function App() {
   const [tasks, setTasks] = React.useState([])
