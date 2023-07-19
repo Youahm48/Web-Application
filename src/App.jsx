@@ -10,7 +10,7 @@ import CreateCardModal from "./modals/CreateCardModal"
 
 import './App.css'
 
-import Database from "./scripts/Database.js"
+//import Database from "./scripts/Database.js"
 
 export default function App() {
   const [tasks, setTasks] = React.useState([])
