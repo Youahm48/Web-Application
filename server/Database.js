@@ -1,4 +1,8 @@
-//data needs to be get and posted to replit database url instead of importing the database
+const RDB = require("@replit/database")
+
+const db = new RDB()
+
+module.exports = db
 
 /*
 const databaseModel = {
