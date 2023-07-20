@@ -12,6 +12,14 @@ Database.define = async function(keyName, value) {
   await db.set(keyName, value)
 }
 
+Database.update = async function(keyName, value) {
+  const key = await db.get(keyName)
+  if(!key) {
+    throw Error(`Key [${keyName}] does not exist. Define it first`)
+  }
+  await db.set(keyName, value)
+}
+
 module.exports = Database
 
 /*
