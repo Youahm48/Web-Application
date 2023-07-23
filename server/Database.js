@@ -20,13 +20,23 @@ Database.update = async function(keyName, value) {
   await db.set(keyName, value)
 }
 
-module.exports = Database
-
-/*
-const databaseModel = {
-  userId: "e",
-  password: "r",
-  taskList: [],
-  //other options
+Database.delete = async function(keyName) {
+  const key = await db.get(keyName)
+  if(!key) {
+    throw Error(`Key [${keyName}] does not exist.`)
+  }
+  await db.delete(keyName)
 }
-*/
+
+Database.find = async function(keyName) {
+  const key = await db.get(keyName)
+  if(!key) {
+    throw Error(`Key [${keyName}] does not exist.`)
+  }
+  return key
+}
+
+//function to change only a specific key in the value object of the instance
+//find functon
+
+module.exports = Database
