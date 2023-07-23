@@ -1,4 +1,5 @@
 import React from "react"
+import axios from "axios"
 
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
@@ -9,8 +10,6 @@ import ListCard from "./components/ListCard"
 import CreateCardModal from "./modals/CreateCardModal"
 
 import './App.css'
-
-//import Database from "./scripts/Database.js"
 
 export default function App() {
   const [tasks, setTasks] = React.useState([])
