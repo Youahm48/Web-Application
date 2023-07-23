@@ -17,13 +17,29 @@ async function loadTasks() {
     const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
       headers: {
         //change to actual user
-        userId: "defaultuser",
+        userid: "defaultuser",
         //Change to process.env auth key
         authorisation: "Yes"
       }
     })
 
     return fetchData.data.taskList
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function saveTasks(taskList) {
+  try {
+    const postData = await axios.get("https://web-application.logicerror.repl.co/database/updatetasks", {
+      headers: {
+        //change to actual user later
+        userid: "defaultuser",
+        tasklist: JSON.stringify(taskList),
+        //change to auth key later
+        authorisation: "Yes"
+      }
+    })
   } catch (error) {
     console.log(error)
   }
@@ -41,6 +57,10 @@ export default function App() {
 
   function addTask(taskObject) {
     setTasks([
+      ...tasks,
+      taskObject
+    ])
+    saveTasks([
       ...tasks,
       taskObject
     ])

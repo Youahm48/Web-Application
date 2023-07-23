@@ -35,4 +35,8 @@ const databaseModel = {
   ],
 }
 
-Database.define(userId, databaseModel)
+//Database.define(userId, databaseModel)
+
+Database.update(userId, databaseModel)
+
+Database.find("defaultuser").then((e)=>console.log(e))

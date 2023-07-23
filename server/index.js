@@ -8,8 +8,18 @@ const app = express()
 
 app.use(express.static(path.resolve(__dirname, "../dist")))
 
-app.get("/get", function(req, res) {
-  res.send("Get request made")
+//change to database process.env url later
+app.get("/database/updatetasks", async function(req, res) {
+  //change this later as well
+  if(req.headers.userid && req.headers.tasklist && req.headers.authorisation == "Yes") {
+    var user = await Database.find(req.headers.userid)
+    user.taskList = JSON.parse(req.headers.tasklist)
+    await Database.update(req.headers.userid, user)
+    res.send("ok")
+  }
+  else {
+    console.log("didn't work")
+  }
 })
 
 //change to database process.env url
@@ -21,6 +31,10 @@ app.get("/database/find", async function(req, res) {
   else {
     res.send("didn't work")
   }
+})
+
+app.get("/get", function(req, res) {
+  res.send("Get request made")
 })
 
 app.get("*", function(req, res) {
