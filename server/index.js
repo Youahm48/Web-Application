@@ -12,8 +12,15 @@ app.get("/get", function(req, res) {
   res.send("Get request made")
 })
 
-app.get("/database", async function(req, res) {
-  res.send(await Database.find("A"))
+//change to database process.env url
+app.get("/database/find", async function(req, res) {
+  //change to process.env key
+  if(req.headers.userid && req.headers.authorisation == "Yes") {
+    res.send(await Database.find(req.headers.userid))
+  }
+  else {
+    res.send("didn't work")
+  }
 })
 
 app.get("*", function(req, res) {

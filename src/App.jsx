@@ -11,8 +11,33 @@ import CreateCardModal from "./modals/CreateCardModal"
 
 import './App.css'
 
+async function loadTasks() {
+  try {
+    //Change url and server route to a process.env url
+    const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
+      headers: {
+        //change to actual user
+        userId: "defaultuser",
+        //Change to process.env auth key
+        authorisation: "Yes"
+      }
+    })
+
+    return fetchData.data.taskList
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export default function App() {
   const [tasks, setTasks] = React.useState([])
+
+  //change to a function that executes only once at load in
+  if(!tasks[0]) {
+    loadTasks().then(function (taskList) {
+      setTasks(taskList)
+    })
+  }
 
   function addTask(taskObject) {
     setTasks([

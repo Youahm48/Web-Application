@@ -36,7 +36,6 @@ Database.find = async function(keyName) {
   return key
 }
 
-//function to change only a specific key in the value object of the instance
-//find functon
-
 module.exports = Database
+
+//function to change only a specific key in the value object of the instance
