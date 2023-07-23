@@ -21,7 +21,7 @@ export default function Sidebar() {
     <div id="sidebar">
       <div id="sidebar-internal">
         <div id="sidebar-internal-header">
-          <img id="sidebar-logo" src="../public/logo.png"/>
+          <img id="sidebar-logo" src="/logo.png"/>
           {/*<div id="sidebar-title">Title</div>*/}
         </div>
         <div id="sidebar-internal-content">
