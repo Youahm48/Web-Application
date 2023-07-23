@@ -65,11 +65,11 @@ export default function CreateCardModal(props) {
           <div id="create-card-form-body">
             <div>
               <p>Name</p>
-              <input onChange={handleNameChange} />
+              <input onChange={handleNameChange} required/>
             </div>
             <div>
               <p>Deadline</p>
-              <input type="datetime-local" onChange={handleDeadlineChange} />
+              <input type="datetime-local" onChange={handleDeadlineChange} required/>
             </div>
             <div>
               <p>Priority</p>
@@ -81,7 +81,7 @@ export default function CreateCardModal(props) {
             </div>
             <div>
               <p>Subject</p>
-              <input onChange={handleSubjectChange} />
+              <input onChange={handleSubjectChange} required/>
             </div>
           </div>
           <div id="create-card-form-footer">
