@@ -26,13 +26,13 @@ export default function Sidebar() {
         </div>
         <div id="sidebar-internal-content">
           <div id="sidebar-internal-view-container">
-            <a class="home-menu-item">Home</a>
-            <a class="tasks-menu-item">Tasks</a>
-            <a class="calendar-menu-item">Calendar</a>
+            <a className="home-menu-item">Home</a>
+            <a className="tasks-menu-item">Tasks</a>
+            <a className="calendar-menu-item">Calendar</a>
           </div>
           <div id="sidebar-internal-footer">
-            <a class="documentation-menu-item">Documentation</a>
-            <a class="settings-menu-item">Settings</a>
+            <a className="documentation-menu-item">Documentation</a>
+            <a className="settings-menu-item">Settings</a>
           </div>
         </div>
       </div>
