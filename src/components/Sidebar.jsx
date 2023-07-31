@@ -26,26 +26,26 @@ export default function Sidebar() {
         </div>
         <div id="sidebar-internal-content">
           <div id="sidebar-internal-view-container">
-            <div>Home</div>
-            <div>Tasks</div>
-            <div>Calendar</div>
+            <a class="home-menu-item">Home</a>
+            <a class="tasks-menu-item">Tasks</a>
+            <a class="calendar-menu-item">Calendar</a>
           </div>
           <div id="sidebar-internal-footer">
-            <div>Documentation</div>
-            <div>Settings</div>
+            <a class="documentation-menu-item">Documentation</a>
+            <a class="settings-menu-item">Settings</a>
           </div>
         </div>
       </div>
       <div id="sidebar-external">
         <button id="sidebar-toggle" className="material-symbols-outlined" onClick={toggleSidebar}>menu</button>
         <div className="sidebar-section">
-          <a className="material-symbols-outlined sidebar-item">home</a>
-          <a className="material-symbols-outlined sidebar-item">check_circle</a>
-          <a className="material-symbols-outlined sidebar-item">calendar_month</a>
+          <a className="material-symbols-outlined sidebar-item home-menu-item">home</a>
+          <a className="material-symbols-outlined sidebar-item tasks-menu-item">check_circle</a>
+          <a className="material-symbols-outlined sidebar-item calendar-menu-item">calendar_month</a>
         </div>
         <div id="bottom-sidebar-section" className="sidebar-section">
-          <a className="material-symbols-outlined sidebar-item">help</a>
-          <a className="material-symbols-outlined sidebar-item">settings</a>
+          <a className="material-symbols-outlined sidebar-item documentation-menu-item">help</a>
+          <a className="material-symbols-outlined sidebar-item settings-menu-item">settings</a>
         </div>
       </div>
     </div>
