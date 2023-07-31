@@ -37,7 +37,7 @@
   height: 100vh;
 }
 
-#sidebar-internal-view-container div {
+#sidebar-internal-view-container a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@
   font-size: 16px;
 }
 
-#sidebar-internal-footer div {
+#sidebar-internal-footer a {
   display: flex;
   justify-content: center;
   align-items: center;
