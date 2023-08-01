@@ -9,6 +9,8 @@ import ListCard from "./components/ListCard"
 
 import CreateCardModal from "./modals/CreateCardModal"
 
+import jsStyles from "./scripts/styles.js"
+
 import './App.css'
 
 async function loadTasks() {
@@ -87,6 +89,8 @@ export default function App() {
   function closeModal() {
     setIsOpen(false)
   }
+  
+  jsStyles()
   
   return(
     <div id="horizontal-container">
