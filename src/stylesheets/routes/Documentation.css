@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#horizontal-container {
+  display: flex;
+  flex-flow: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#vertical-container {
+  width: 100%;
+}
+
+#main {
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+}
