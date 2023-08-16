@@ -31,8 +31,8 @@ export default function Sidebar() {
             <a className="calendar-menu-item">Calendar</a>
           </div>
           <div id="sidebar-internal-footer">
-            <a className="documentation-menu-item">Documentation</a>
-            <a className="settings-menu-item">Settings</a>
+            <a className="documentation-menu-item" href="/documentation">Documentation</a>
+            <a className="settings-menu-item" href="/settings">Settings</a>
           </div>
         </div>
       </div>
@@ -44,8 +44,8 @@ export default function Sidebar() {
           <a className="material-symbols-outlined sidebar-item calendar-menu-item">calendar_month</a>
         </div>
         <div id="bottom-sidebar-section" className="sidebar-section">
-          <a className="material-symbols-outlined sidebar-item documentation-menu-item">help</a>
-          <a className="material-symbols-outlined sidebar-item settings-menu-item">settings</a>
+          <a className="material-symbols-outlined sidebar-item documentation-menu-item" href="/documentation">help</a>
+          <a className="material-symbols-outlined sidebar-item settings-menu-item" href="/settings">settings</a>
         </div>
       </div>
     </div>
