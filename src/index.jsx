@@ -5,6 +5,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import App from "./App"
 import Settings from "./routes/Settings"
 import Documentation from "./routes/Documentation"
+import Register from "./routes/Register"
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/documentation",
     element: <Documentation />
+  },
+  {
+    path: "/register",
+    element: <Register />
   }
 ])
 
