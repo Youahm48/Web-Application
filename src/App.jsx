@@ -78,6 +78,7 @@ export default function App() {
       }
     )
     setTasks(updatedTasks)
+    saveTasks(updatedTasks)
   }
 
   const [isOpen, setIsOpen] = React.useState("")
