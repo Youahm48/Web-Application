@@ -24,6 +24,7 @@ export default function Documentation(props) {
                   <input id="username"></input>
                   <p>Password</p>
                   <input id="password"></input>
+                  <button id="login-button">Log in</button>
                 </div>
               </div>
             </div>
