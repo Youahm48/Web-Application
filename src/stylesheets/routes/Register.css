@@ -55,7 +55,8 @@
 #login-form input {
   padding: 3px;
   margin: 5px;
-  border-radius: 5px;
+  border: solid black 1px;
+  border-radius: 5px 0px;
 }
 
 .material-symbols-outlined {
