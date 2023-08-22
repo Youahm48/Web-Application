@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+
+#vertical-container {
+  width: 100%;
+}
+
+#main {
+  background: linear-gradient(45deg, rgba(33,255,0,1) 0%, rgba(133,154,0,0.4766281512605042) 25%, rgba(0,255,239,1) 50%, rgba(100,0,135,0.5074404761904762) 75%, rgba(0,9,255,1) 100%);
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#form {
+  background: #0000005e;
+  border-radius: 5px;
+}
+
+#form-header {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#logo-spin {
+  width: 100px;
+  animation: spin 360s ease-in
+}
+
+#main-form {
+  background: #fbfbfb;
+  border-radius: 5px;
+}
+
+#tabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#login-form input {
+  padding: 3px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+}
+
+@keyframes spin {
+  50% {transform: rotate(3600000deg);}
+}
