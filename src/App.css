@@ -19,6 +19,7 @@
 #main {
   /*fix this later if it's necessary*/
   height: calc(100% - 60px);
+  /*alternative: background: linear-gradient(45deg, rgba(33,255,0,1) 0%, rgba(0,255,239,1) 50%, rgba(0,39,255,1) 100%);*/
   background: linear-gradient(45deg, rgba(33,255,0,1) 0%, rgba(133,154,0,0.4766281512605042) 25%, rgba(0,255,239,1) 50%, rgba(100,0,135,0.5074404761904762) 75%, rgba(0,9,255,1) 100%);
 }
 
