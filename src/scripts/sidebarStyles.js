@@ -1,4 +1,4 @@
-export default function jsStyles() {
+export default function jsSidebarStyles() {
   document.querySelectorAll('[class$="-menu-item"]').forEach(function(element) {
     element.addEventListener("mouseover", function(event) {
       var className = Array.from(event.target.classList).filter((item) => item.endsWith("-menu-item"))
