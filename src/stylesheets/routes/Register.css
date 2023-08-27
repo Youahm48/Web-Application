@@ -43,7 +43,19 @@
 #tabs {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+#login-tab {
   padding: 10px;
+  width: 100%;
+  text-align: center
+}
+
+#registration-tab {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 #login-form {
