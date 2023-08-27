@@ -1,7 +1,13 @@
 import React from "react"
 import "../stylesheets/components/Sidebar.css"
 
+import jsSidebarStyles from "../scripts/sidebarStyles.js"
+
 export default function Sidebar() {
+  React.useEffect(() => {
+    jsSidebarStyles()
+  })
+  
   var isOpen = false
 
   function toggleSidebar() {
