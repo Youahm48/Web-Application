@@ -8,7 +8,7 @@ import jsTabSwitcher from "../scripts/tabSwitcher.js"
 
 export default function Register(props) {
   React.useEffect(() => {
-    jsTabSwitcher()
+    jsTabSwitcher(setLoginUsername, setLoginPassword, setRegisterUsername, setRegisterPassword)
   })
 
   const [loginUsername, setLoginUsername] = React.useState("")
@@ -31,6 +31,22 @@ export default function Register(props) {
   function handleRegisterPasswordChange() {
     setRegisterPassword(event.target.value)
   }
+
+  function login() {
+    event.preventDefault()
+    console.log(loginUsername)
+    console.log(loginPassword)
+    console.log(registerUsername)
+    console.log(registerPassword)
+  }
+
+  function register() {
+    event.preventDefault()
+    console.log(loginUsername)
+    console.log(loginPassword)
+    console.log(registerUsername)
+    console.log(registerPassword)
+  }
   
   return(
       <div id="vertical-container">
@@ -46,20 +62,20 @@ export default function Register(props) {
                   <div id="login-tab">Log in</div>
                   <div id="registration-tab" class="inactive">Register</div>
                 </div>
-                <div id="login-form">
+                <form id="login-form" onSubmit={login}>
                   <p>Username</p>
-                  <input onChange={handleLoginUsernameChange} id="username"></input>
+                  <input onChange={handleLoginUsernameChange} id="login-username" required></input>
                   <p>Password</p>
-                  <input onChange={handleLoginPasswordChange} id="password"></input>
-                  <button id="login-button">Log in</button>
-                </div>
-                <div id="registration-form">
+                  <input onChange={handleLoginPasswordChange} id="login-password" required></input>
+                  <button type="submit" id="login-button">Log in</button>
+                </form>
+                <form id="registration-form" onSubmit={register}>
                   <p>Username</p>
-                  <input onChange={handleRegisterUsernameChange} id="username"></input>
+                  <input onChange={handleRegisterUsernameChange} id="register-username" required></input>
                   <p>Password</p>
-                  <input onChange={handleRegisterPasswordChange} id="password"></input>
-                  <button id="register-button">Register</button>
-                </div>
+                  <input onChange={handleRegisterPasswordChange} id="register-password" required></input>
+                  <button type="submit" id="register-button">Register</button>
+                </form>
               </div>
             </div>
           </div>
