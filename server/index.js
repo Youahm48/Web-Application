@@ -36,7 +36,7 @@ app.get("/database/find", async function(req, res) {
 
 app.get("/database/register", async function(req, res) {
   if(req.headers.userid && req.headers.password) {
-    Database.define(req.headers.userid, { password: req.headers.password, tasklist: [] })
+    Database.define(req.headers.userid, { username: req.headers.userid, password: req.headers.password, taskList: [] })
     res.send("Registered")
   }
 })

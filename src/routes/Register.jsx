@@ -48,6 +48,12 @@ export default function Register(props) {
           password: password
         }
       })
+      const userData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
+        headers: {
+          userid: username,
+        }
+      })
+      localStorage.setItem("user", JSON.stringify(userData.data))
       return "You have been registered successfully"
     }
     else {
@@ -75,6 +81,15 @@ export default function Register(props) {
     const msg = await Login(loginUsername, loginPassword)
     console.log(msg)
     document.getElementById("login-label").innerHTML = msg
+    if(msg == "Authenticated") {
+      const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
+        headers: {
+          userid: loginUsername,
+        }
+      })
+      localStorage.setItem("user", JSON.stringify(fetchData.data))
+      window.location.replace("https://web-application.logicerror.repl.co/")
+    }
   }
 
   async function register() {

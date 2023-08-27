@@ -11,42 +11,48 @@ import CreateCardModal from "./modals/CreateCardModal"
 
 import './App.css'
 
-async function loadTasks() {
-  try {
-    const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
-      headers: {
-        //change to actual user
-        userid: "defaultuser",
-        //Change to process.env auth key
-        authorisation: "Yes"
-      }
-    })
-
-    return fetchData.data.taskList
-  } catch (error) {
-    console.log(error)
+export default function App(props) {
+  if(!localStorage.getItem("user")) {
+    window.location.replace("https://web-application.logicerror.repl.co/register")
   }
-}
 
-async function saveTasks(taskList) {
-  try {
-    const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/updatetasks", {
-      headers: {
-        //change to actual user later
-        userid: "defaultuser",
-        tasklist: JSON.stringify(taskList),
-        //change to auth key later
-        authorisation: "Yes"
-      }
-    })
-  } catch (error) {
-    console.log(error)
+  const user = JSON.parse(localStorage.getItem("user"))
+
+  console.log(user)
+  console.log(user.username)
+
+  async function loadTasks() {
+    try {
+      const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
+        headers: {
+          userid: user.username,
+          //Change to process.env auth key
+          authorisation: "Yes"
+        }
+      })
+  
+      return fetchData.data.taskList
+    } catch (error) {
+      console.log(error)
+    }
   }
-}
-
-export default function App() {
+  
+  async function saveTasks(taskList) {
+    try {
+      const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/updatetasks", {
+        headers: {
+          userid: user.username,
+          tasklist: JSON.stringify(taskList),
+          authorisation: "Yes"
+        }
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
   const [tasks, setTasks] = React.useState([])
-
+console.log(tasks[0])
   //change to a function that executes only once at load in
   if(!tasks[0]) {
     loadTasks().then(function (taskList) {

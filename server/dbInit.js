@@ -6,9 +6,10 @@ const Database = require("./Database.js")
 
 const userId = "defaultuser"
 const databaseModel = {
+  username: "defaultuser",
   password: "r",
   taskList: [
-    {
+    /*{
       deadline: "2023-07-23T03:21:00.000Z",
       id: "Task-Mz9dEvlFitDEJ-eQSv8Lt",
       isComplete: false,
@@ -31,7 +32,7 @@ const databaseModel = {
       name: "c",
       priority: "Low",
       subject: "x"
-    }
+    }*/
   ],
 }
 
