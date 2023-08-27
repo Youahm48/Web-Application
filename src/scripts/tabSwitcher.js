@@ -17,8 +17,8 @@ export default function jsTabSwitcher(setLoginUsername, setLoginPassword, setReg
     registerForm.style.display = "none"
     setRegisterUsername("")
     setRegisterPassword("")
-    registerUsername.reset()
-    registerPassword.reset()
+    registerUsername.value = ""
+    registerPassword.value = ""
   }
 
   registerTab.onclick = function() {
@@ -28,7 +28,7 @@ export default function jsTabSwitcher(setLoginUsername, setLoginPassword, setReg
     registerForm.style.display = "flex"
     setLoginUsername("")
     setLoginPassword("")
-    loginUsername.reset()
-    loginPassword.reset()
+    loginUsername.value = ""
+    loginPassword.value = ""
   }
 }
