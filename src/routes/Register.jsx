@@ -1,4 +1,5 @@
 import React from "react"
+import axios from "axios"
 
 import Header from "../components/Header"
 
@@ -32,20 +33,57 @@ export default function Register(props) {
     setRegisterPassword(event.target.value)
   }
 
-  function login() {
-    event.preventDefault()
-    console.log(loginUsername)
-    console.log(loginPassword)
-    console.log(registerUsername)
-    console.log(registerPassword)
+  
+  async function Register(username, password) {
+    const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
+      headers: {
+        userid: username,
+      }
+    })
+
+    if(fetchData.data == "User does not exist") {
+      const register = await axios.get("https://web-application.logicerror.repl.co/database/register", {
+        headers: {
+          userid: username,
+          password: password
+        }
+      })
+      return "You have been registered successfully"
+    }
+    else {
+      return "User already exists"
+    }
   }
 
-  function register() {
+  async function Login(username, password) {
+    const login = await axios.get("https://web-application.logicerror.repl.co/database/login", {
+      headers: {
+        userid: username,
+        password: password
+      }
+    })
+
+    return login.data
+  }
+
+  async function login() {
     event.preventDefault()
     console.log(loginUsername)
     console.log(loginPassword)
     console.log(registerUsername)
     console.log(registerPassword)
+    const msg = await Login(loginUsername, loginPassword)
+    console.log(msg)
+    document.getElementById("login-label").innerHTML = msg
+  }
+
+  async function register() {
+    event.preventDefault()
+    const msg = await Register(registerUsername, registerPassword)
+    document.getElementById("register-label").innerHTML = msg
+    if(msg == "You have been registered successfully") {
+      window.location.replace("https://web-application.logicerror.repl.co/")
+    }
   }
   
   return(
@@ -68,6 +106,7 @@ export default function Register(props) {
                   <p>Password</p>
                   <input onChange={handleLoginPasswordChange} id="login-password" required></input>
                   <button type="submit" id="login-button">Log in</button>
+                  <h6 id="login-label"></h6>
                 </form>
                 <form id="registration-form" onSubmit={register}>
                   <p>Username</p>
@@ -75,6 +114,7 @@ export default function Register(props) {
                   <p>Password</p>
                   <input onChange={handleRegisterPasswordChange} id="register-password" required></input>
                   <button type="submit" id="register-button">Register</button>
+                  <h6 id="register-label"></h6>
                 </form>
               </div>
             </div>

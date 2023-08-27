@@ -83,6 +83,12 @@
   cursor: pointer;
 }
 
+#login-label {
+  color: red;
+  text-align: center;
+  margin-top: 5px;
+}
+
 #registration-form {
   display: none;
   flex-direction: column;
@@ -95,6 +101,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#register-label {
+  color: red;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .material-symbols-outlined {

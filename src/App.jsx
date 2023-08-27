@@ -13,7 +13,6 @@ import './App.css'
 
 async function loadTasks() {
   try {
-    //Change url and server route to a process.env url
     const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
       headers: {
         //change to actual user
