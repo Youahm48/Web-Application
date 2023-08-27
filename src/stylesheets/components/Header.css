@@ -11,7 +11,7 @@
 #logo {
   /*-40px is size of sidebar button*/
   /*probably change to use transform later*/
-  margin-left: calc(50% - 60px);
+  margin-left: calc(50% - 100px);
   margin-right: 5px;
   width: 50px;
 }
