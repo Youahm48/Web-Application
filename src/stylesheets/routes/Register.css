@@ -59,6 +59,13 @@
   border-radius: 5px;
 }
 
+#login-button {
+  padding: 5px 10px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+}
+
 .material-symbols-outlined {
   font-size: 40px;
 }

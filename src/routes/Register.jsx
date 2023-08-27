@@ -4,7 +4,7 @@ import Header from "../components/Header"
 
 import "../stylesheets/routes/Register.css"
 
-export default function Documentation(props) {
+export default function Register(props) {
   return(
       <div id="vertical-container">
         <Header />
