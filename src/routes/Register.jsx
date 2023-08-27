@@ -119,7 +119,7 @@ export default function Register(props) {
                   <p>Username</p>
                   <input onChange={handleLoginUsernameChange} id="login-username" required></input>
                   <p>Password</p>
-                  <input onChange={handleLoginPasswordChange} id="login-password" required></input>
+                  <input type="password" onChange={handleLoginPasswordChange} id="login-password" required></input>
                   <button type="submit" id="login-button">Log in</button>
                   <h6 id="login-label"></h6>
                 </form>
@@ -127,7 +127,7 @@ export default function Register(props) {
                   <p>Username</p>
                   <input onChange={handleRegisterUsernameChange} id="register-username" required></input>
                   <p>Password</p>
-                  <input onChange={handleRegisterPasswordChange} id="register-password" required></input>
+                  <input type="password" onChange={handleRegisterPasswordChange} id="register-password" required></input>
                   <button type="submit" id="register-button">Register</button>
                   <h6 id="register-label"></h6>
                 </form>
