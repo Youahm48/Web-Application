@@ -10,6 +10,27 @@ export default function Register(props) {
   React.useEffect(() => {
     jsTabSwitcher()
   })
+
+  const [loginUsername, setLoginUsername] = React.useState("")
+  const [loginPassword, setLoginPassword] = React.useState("")
+  const [registerUsername, setRegisterUsername] = React.useState("")
+  const [registerPassword, setRegisterPassword] = React.useState("")
+
+  function handleLoginUsernameChange() {
+    setLoginUsername(event.target.value)
+  }
+
+  function handleLoginPasswordChange() {
+    setLoginPassword(event.target.value)
+  }
+
+  function handleRegisterUsernameChange() {
+    setRegisterUsername(event.target.value)
+  }
+
+  function handleRegisterPasswordChange() {
+    setRegisterPassword(event.target.value)
+  }
   
   return(
       <div id="vertical-container">
@@ -27,16 +48,16 @@ export default function Register(props) {
                 </div>
                 <div id="login-form">
                   <p>Username</p>
-                  <input id="username"></input>
+                  <input onChange={handleLoginUsernameChange} id="username"></input>
                   <p>Password</p>
-                  <input id="password"></input>
+                  <input onChange={handleLoginPasswordChange} id="password"></input>
                   <button id="login-button">Log in</button>
                 </div>
                 <div id="registration-form">
                   <p>Username</p>
-                  <input id="username"></input>
+                  <input onChange={handleRegisterUsernameChange} id="username"></input>
                   <p>Password</p>
-                  <input id="password"></input>
+                  <input onChange={handleRegisterPasswordChange} id="password"></input>
                   <button id="register-button">Register</button>
                 </div>
               </div>
