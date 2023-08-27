@@ -26,8 +26,6 @@ export default function App(props) {
       const fetchData = await axios.get("https://web-application.logicerror.repl.co/database/find", {
         headers: {
           userid: user.username,
-          //Change to process.env auth key
-          authorisation: "Yes"
         }
       })
   
@@ -43,7 +41,6 @@ export default function App(props) {
         headers: {
           userid: user.username,
           tasklist: JSON.stringify(taskList),
-          authorisation: "Yes"
         }
       })
     } catch (error) {
@@ -53,7 +50,7 @@ export default function App(props) {
   
   const [tasks, setTasks] = React.useState([])
 console.log(tasks[0])
-  //change to a function that executes only once at load in
+
   if(!tasks[0]) {
     loadTasks().then(function (taskList) {
       setTasks(taskList)

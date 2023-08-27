@@ -10,7 +10,7 @@ app.use(express.static(path.resolve(__dirname, "../dist")))
 
 app.get("/database/updatetasks", async function(req, res) {
   //change this later
-  if(req.headers.userid && req.headers.tasklist && req.headers.authorisation == "Yes") {
+  if(req.headers.userid && req.headers.tasklist) {
     var user = await Database.find(req.headers.userid)
     user.taskList = JSON.parse(req.headers.tasklist)
     await Database.update(req.headers.userid, user)
