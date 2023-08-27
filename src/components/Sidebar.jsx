@@ -32,7 +32,7 @@ export default function Sidebar() {
         </div>
         <div id="sidebar-internal-content">
           <div id="sidebar-internal-view-container">
-            <a className="home-menu-item">Home</a>
+            <a className="home-menu-item" href="/">Home</a>
             <a className="tasks-menu-item">Tasks</a>
             <a className="calendar-menu-item">Calendar</a>
           </div>
@@ -45,7 +45,7 @@ export default function Sidebar() {
       <div id="sidebar-external">
         <button id="sidebar-toggle" className="material-symbols-outlined" onClick={toggleSidebar}>menu</button>
         <div className="sidebar-section">
-          <a className="material-symbols-outlined sidebar-item home-menu-item">home</a>
+          <a className="material-symbols-outlined sidebar-item home-menu-item" href="/">home</a>
           <a className="material-symbols-outlined sidebar-item tasks-menu-item">check_circle</a>
           <a className="material-symbols-outlined sidebar-item calendar-menu-item">calendar_month</a>
         </div>
